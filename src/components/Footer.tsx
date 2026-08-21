@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { navItems } from "@/data/navigation";
 import { profile } from "@/data/profile";
+import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -22,6 +23,7 @@ export function Footer() {
           <p className="mt-2 max-w-sm text-sm text-muted-foreground">
             Building scalable, production-grade web applications with React.js, NestJS, and TypeScript.
           </p>
+          <AvailabilityBadge className="mt-4" />
           <motion.div whileHover={{ x: 4 }} className="mt-4 flex items-center gap-4">
             <a
               href={profile.github}
@@ -40,6 +42,15 @@ export function Footer() {
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
               <LinkedinIcon className="h-5 w-5" />
+            </a>
+            <a
+              href={profile.instagram}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Instagram profile"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <InstagramIcon className="h-5 w-5" />
             </a>
             <a
               href={`mailto:${profile.email}`}

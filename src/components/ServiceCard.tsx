@@ -1,4 +1,4 @@
-import { Blocks, Code2, KeyRound, Layers3, Server, Sparkles } from "lucide-react";
+import { Blocks, Code2, CreditCard, KeyRound, Layers3, Server, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { ServiceEntry } from "@/types";
 import { Card } from "@/components/Card";
@@ -9,6 +9,7 @@ const iconMap: Record<string, LucideIcon> = {
   frontend: Code2,
   "backend-api": Server,
   cms: Blocks,
+  "payment-gateway": CreditCard,
   "auth-security": KeyRound,
   "spec-ai-driven": Sparkles,
 };

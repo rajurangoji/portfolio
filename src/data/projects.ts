@@ -2,6 +2,19 @@ import type { ProjectEntry } from "@/types";
 
 export const projects: ProjectEntry[] = [
   {
+    id: "razorpay-payment-gateway",
+    name: "Razorpay Payment Gateway Integration",
+    type: "Payment Integration",
+    tech: ["Razorpay", "NestJS", "Webhooks", "Payment Verification", "Refunds"],
+    bullets: [
+      "Designed and built a complete Razorpay payment gateway integration end-to-end, owning the entire payment lifecycle from checkout to settlement.",
+      "Implemented the checkout flow starting from the customer's 'Pay Now' click through order creation and Razorpay checkout initiation.",
+      "Built server-side payment verification to validate signatures and confirm transaction authenticity before marking orders as paid.",
+      "Handled Razorpay webhooks to reliably capture asynchronous payment events and keep order status in sync with the gateway.",
+      "Implemented refund processing, enabling full and partial refunds to be triggered and tracked through to completion.",
+    ],
+  },
+  {
     id: "serhafen",
     name: "Serhafen – Customs Operations Platform",
     type: "Service Project",

@@ -14,8 +14,12 @@ export interface ProfileData {
   location: string;
   github: string;
   linkedin: string;
+  instagram: string;
   githubHandle: string;
   linkedinHandle: string;
+  instagramHandle: string;
+  freelanceAvailable: boolean;
+  availabilityText: string;
   education: EducationEntry[];
 }
 

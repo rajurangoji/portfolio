@@ -8,8 +8,6 @@ const Experience = lazy(() => import("@/pages/Experience"));
 const Projects = lazy(() => import("@/pages/Projects"));
 const Skills = lazy(() => import("@/pages/Skills"));
 const Services = lazy(() => import("@/pages/Services"));
-const Blog = lazy(() => import("@/pages/Blog"));
-const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Resume = lazy(() => import("@/pages/Resume"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
@@ -33,8 +31,6 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />

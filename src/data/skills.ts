@@ -15,12 +15,21 @@ export const skills: SkillCategory[] = [
       "Bootstrap 5",
       "ShadCN/UI",
       "Material UI",
+      "Website Development",
     ],
   },
   {
     id: "backend",
     category: "Backend",
-    items: ["NestJS", "Express.js", "Node.js", "REST API Design", "Authentication & Authorization (JWT/OAuth)"],
+    items: [
+      "NestJS",
+      "Express.js",
+      "Node.js",
+      "REST API Design",
+      "Authentication & Authorization (JWT/OAuth)",
+      "Razorpay Payment Gateway",
+      "Webhooks",
+    ],
   },
   {
     id: "cms",

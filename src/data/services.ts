@@ -30,6 +30,13 @@ export const services: ServiceEntry[] = [
     tech: ["Strapi CMS", "Content Modeling", "Custom Plugins"],
   },
   {
+    id: "payment-gateway",
+    title: "Payment Gateway Integration",
+    description:
+      "End-to-end Razorpay payment gateway integration — from checkout initiation through payment verification, webhook handling, and refund processing.",
+    tech: ["Razorpay", "Webhooks", "Payment Verification", "Refunds"],
+  },
+  {
     id: "auth-security",
     title: "Authentication & Security",
     description:

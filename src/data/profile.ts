@@ -11,8 +11,12 @@ export const profile: ProfileData = {
   location: "Nizamabad, Telangana, India",
   github: "https://github.com/rajurangoji",
   linkedin: "https://linkedin.com/in/rajurangoji",
+  instagram: "https://www.instagram.com/jersey_no_58_/",
   githubHandle: "github.com/rajurangoji",
   linkedinHandle: "linkedin.com/in/rajurangoji",
+  instagramHandle: "@jersey_no_58_",
+  freelanceAvailable: true,
+  availabilityText: "Open to freelance projects & collaborations",
   education: [
     {
       degree: "Master of Computer Applications (MCA)",

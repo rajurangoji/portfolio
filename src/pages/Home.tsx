@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
+import { ArrowRight, Download, Layers3, Mail } from "lucide-react";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { useSEO } from "@/hooks/useSEO";
 import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { skills } from "@/data/skills";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 import { ExperienceTimelineItem } from "@/components/ExperienceTimelineItem";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ServiceCard } from "@/components/ServiceCard";
+import { StatsStrip } from "@/components/StatsStrip";
 import { staggerContainer, fadeInUp } from "@/lib/motion";
+
+const stats = [
+  { value: "2+", label: "Years of Experience" },
+  { value: `${new Set(experience.map((e) => e.company)).size}`, label: "Companies" },
+  { value: `${projects.length}+`, label: "Major Projects" },
+  { value: `${skills.length}`, label: "Skill Categories" },
+];
 
 export default function Home() {
   useSEO({
@@ -34,14 +44,15 @@ export default function Home() {
             animate={shouldReduceMotion ? undefined : "visible"}
             variants={staggerContainer}
           >
-            <motion.span
-              variants={fadeInUp}
-              className="mb-5 inline-flex items-center rounded-full border border-border bg-secondary/60 px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground"
-            >
-              Full Stack Developer
-            </motion.span>
+            <motion.div variants={fadeInUp} className="mb-5 flex flex-wrap items-center gap-2.5">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-chart-2/40 bg-chart-2/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-chart-1">
+                <Layers3 className="h-3.5 w-3.5" aria-hidden="true" />
+                Full Stack Developer
+              </span>
+              <AvailabilityBadge />
+            </motion.div>
             <motion.h1 variants={fadeInUp} className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Building <span className="text-gradient">production-grade</span> web applications that scale.
+              <span className="text-gradient">Full Stack Developer</span> building production-grade web applications that scale.
             </motion.h1>
             <motion.p variants={fadeInUp} className="mt-6 max-w-xl text-base text-muted-foreground text-pretty sm:text-lg">
               {profile.summary}
@@ -89,6 +100,15 @@ export default function Home() {
                 <LinkedinIcon className="h-5 w-5" />
               </a>
               <a
+                href={profile.instagram}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram profile"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+              <a
                 href={`mailto:${profile.email}`}
                 aria-label="Send email"
                 className="text-muted-foreground transition-colors hover:text-foreground"
@@ -99,6 +119,10 @@ export default function Home() {
           </motion.div>
 
           <ProfilePhoto />
+        </div>
+
+        <div className="mx-auto mt-16 max-w-5xl">
+          <StatsStrip stats={stats} />
         </div>
       </section>
 
@@ -176,7 +200,7 @@ export default function Home() {
             Let's build something <span className="text-gradient">production-ready.</span>
           </h2>
           <p className="relative mx-auto mt-3 max-w-md text-sm text-muted-foreground">
-            Open to full stack engineering roles and collaborations.
+            Open to full stack engineering roles, freelance projects, and collaborations.
           </p>
           <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link

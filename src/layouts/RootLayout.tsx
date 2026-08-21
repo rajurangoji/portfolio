@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 export function RootLayout() {
   return (
@@ -12,6 +13,7 @@ export function RootLayout() {
       >
         Skip to content
       </a>
+      <ScrollProgressBar />
       <ScrollToTop />
       <Navbar />
       <main id="main-content" className="flex-1">

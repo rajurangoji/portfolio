@@ -1,10 +1,11 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { useSEO } from "@/hooks/useSEO";
 import { profile } from "@/data/profile";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Card } from "@/components/Card";
+import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 
 const contactLinks = [
   {
@@ -31,6 +32,12 @@ const contactLinks = [
     value: profile.linkedinHandle,
     href: profile.linkedin,
   },
+  {
+    icon: InstagramIcon,
+    label: "Instagram",
+    value: profile.instagramHandle,
+    href: profile.instagram,
+  },
 ];
 
 export default function Contact() {
@@ -49,7 +56,11 @@ export default function Contact() {
         description="Have a role, project, or idea in mind? Reach out directly — I typically respond within a day."
       />
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+      <div className="mt-6 flex justify-center">
+        <AvailabilityBadge />
+      </div>
+
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {contactLinks.map((link, i) => (
           <ScrollReveal key={link.label} delay={i * 0.06}>
             <a

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 interface CardProps {
@@ -8,8 +9,12 @@ interface CardProps {
 }
 
 export function Card({ children, className, glass = true }: CardProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div
+    <motion.div
+      whileHover={shouldReduceMotion ? undefined : { y: -4 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
       className={cn(
         "rounded-xl border border-border p-6 transition-colors duration-300",
         glass ? "glass" : "bg-card",
@@ -18,6 +23,6 @@ export function Card({ children, className, glass = true }: CardProps) {
       )}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

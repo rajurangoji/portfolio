@@ -2,14 +2,26 @@ import type { ExperienceEntry } from "@/types";
 
 export const experience: ExperienceEntry[] = [
   {
-    id: "andinolabs",
+    id: "andinolabs-swe",
+    role: "Software Engineer",
+    company: "AndinoLabs",
+    period: "May 2026 – Present",
+    bullets: [
+      "Promoted from Associate Software Engineer to Software Engineer in recognition of consistent delivery impact and growing technical ownership.",
+      "Designed and built a complete Razorpay payment gateway integration end-to-end — from checkout initiation ('Pay Now') through payment verification, webhook handling, and refund processing.",
+      "Continue to architect full stack features using React.js and NestJS for enterprise-grade customs clearance and logistics applications serving LATAM markets.",
+      "Own increasingly complex modules across two concurrent product lines, working closely with product and design in agile sprints.",
+    ],
+  },
+  {
+    id: "andinolabs-associate",
     role: "Associate Software Engineer",
     company: "AndinoLabs",
-    period: "June 2024 – Present",
+    period: "June 2024 – May 2026",
     bullets: [
-      "Architect and deliver full stack features using React.js (frontend) and NestJS (backend) for enterprise-grade customs clearance and logistics applications serving LATAM markets.",
-      "Lead spec-based development initiatives, translating detailed technical specifications into modular, reusable components — reducing rework and improving delivery predictability.",
-      "Leverage AI-driven development tools and practices (GitHub Copilot, prompt-assisted code generation) to accelerate feature delivery and improve code quality.",
+      "Architected and delivered full stack features using React.js (frontend) and NestJS (backend) for enterprise-grade customs clearance and logistics applications serving LATAM markets.",
+      "Led spec-based development initiatives, translating detailed technical specifications into modular, reusable components — reducing rework and improving delivery predictability.",
+      "Leveraged AI-driven development tools and practices (GitHub Copilot, prompt-assisted code generation) to accelerate feature delivery and improve code quality.",
       "Designed and implemented secure, role-based authentication and authorization systems from scratch using JWT, ensuring compliance with security best practices.",
       "Collaborated with UI/UX designers and product managers in agile sprints to deliver production-ready features across two concurrent product lines.",
       "Enforced clean code standards via peer code reviews and established reusable component libraries, reducing technical debt across projects.",

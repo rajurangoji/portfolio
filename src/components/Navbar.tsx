@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { useScrolled } from "@/hooks/useScrolled";
 import { navItems } from "@/data/navigation";
 import { profile } from "@/data/profile";
@@ -84,6 +84,15 @@ export function Navbar() {
             <LinkedinIcon className="h-4.5 w-4.5" />
           </a>
           <a
+            href={profile.instagram}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Instagram profile"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <InstagramIcon className="h-4.5 w-4.5" />
+          </a>
+          <a
             href="/resume.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-transform hover:scale-[1.03] active:scale-[0.98]"
@@ -141,6 +150,9 @@ export function Navbar() {
                 </a>
                 <a href={profile.linkedin} target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile">
                   <LinkedinIcon className="h-5 w-5 text-muted-foreground" />
+                </a>
+                <a href={profile.instagram} target="_blank" rel="noreferrer noopener" aria-label="Instagram profile">
+                  <InstagramIcon className="h-5 w-5 text-muted-foreground" />
                 </a>
               </div>
               <a
