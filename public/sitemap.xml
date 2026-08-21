@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rajurangoji.dev/</loc><priority>1.0</priority></url>
-  <url><loc>https://rajurangoji.dev/about</loc><priority>0.8</priority></url>
-  <url><loc>https://rajurangoji.dev/experience</loc><priority>0.8</priority></url>
-  <url><loc>https://rajurangoji.dev/projects</loc><priority>0.8</priority></url>
-  <url><loc>https://rajurangoji.dev/skills</loc><priority>0.7</priority></url>
-  <url><loc>https://rajurangoji.dev/services</loc><priority>0.7</priority></url>
-  <url><loc>https://rajurangoji.dev/contact</loc><priority>0.7</priority></url>
-  <url><loc>https://rajurangoji.dev/resume</loc><priority>0.7</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/</loc><priority>1.0</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/about</loc><priority>0.8</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/experience</loc><priority>0.8</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/projects</loc><priority>0.8</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/skills</loc><priority>0.7</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/services</loc><priority>0.7</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://rajurangoji.github.io/portfolio/resume</loc><priority>0.7</priority></url>
 </urlset>

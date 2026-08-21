@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Card } from "@/components/Card";
 import { Badge } from "@/components/Badge";
+import { asset } from "@/lib/assets";
 
 export default function Resume() {
   useSEO({
@@ -22,7 +23,7 @@ export default function Resume() {
 
       <ScrollReveal className="mt-8">
         <a
-          href="/resume.pdf"
+          href={asset("resume.pdf")}
           download
           className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-transform hover:scale-[1.03] active:scale-[0.98]"
         >

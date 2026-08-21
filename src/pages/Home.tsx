@@ -17,6 +17,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { StatsStrip } from "@/components/StatsStrip";
 import { staggerContainer, fadeInUp } from "@/lib/motion";
+import { asset } from "@/lib/assets";
 
 const stats = [
   { value: "2+", label: "Years of Experience" },
@@ -66,7 +67,7 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="/resume.pdf"
+                href={asset("resume.pdf")}
                 download
                 className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
               >

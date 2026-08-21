@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HeroVisual } from "@/components/HeroVisual";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/assets";
 
 interface ProfilePhotoProps {
   className?: string;
@@ -25,7 +26,7 @@ export function ProfilePhoto({ className, size = "lg" }: ProfilePhotoProps) {
       <div className="absolute inset-0 bg-grid" aria-hidden="true" />
       <div className="glow-orb absolute h-56 w-56 rounded-full sm:h-72 sm:w-72" aria-hidden="true" />
       <img
-        src="/images/profile.jpg"
+        src={asset("images/profile.jpg")}
         alt={profile.name}
         loading="lazy"
         decoding="async"

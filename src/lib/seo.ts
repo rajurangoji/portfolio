@@ -1,6 +1,7 @@
 import type { BlogPost } from "@/types";
 
-export const SITE_URL = "https://rajurangoji.dev";
+// TODO: switch back to "https://rajurangoji.dev" once the custom domain is attached to GitHub Pages.
+export const SITE_URL = "https://rajurangoji.github.io/portfolio";
 export const SITE_NAME = "Raju Rangoji";
 
 export interface SEOInput {

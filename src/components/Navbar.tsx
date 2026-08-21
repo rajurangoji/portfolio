@@ -7,6 +7,7 @@ import { useScrolled } from "@/hooks/useScrolled";
 import { navItems } from "@/data/navigation";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/assets";
 
 export function Navbar() {
   const scrolled = useScrolled();
@@ -93,7 +94,7 @@ export function Navbar() {
             <InstagramIcon className="h-4.5 w-4.5" />
           </a>
           <a
-            href="/resume.pdf"
+            href={asset("resume.pdf")}
             download
             className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-transform hover:scale-[1.03] active:scale-[0.98]"
           >
@@ -156,7 +157,7 @@ export function Navbar() {
                 </a>
               </div>
               <a
-                href="/resume.pdf"
+                href={asset("resume.pdf")}
                 download
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
               >
