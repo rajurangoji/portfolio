@@ -12,7 +12,7 @@ export function Badge({ children, className }: BadgeProps) {
       className={cn(
         "inline-flex items-center rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-secondary-foreground",
         className,
-      )}
+      )} 
     >
       {children}
     </span>
